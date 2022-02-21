@@ -1,11 +1,28 @@
-.features {
+.featuresBox {
+	margin-bottom: 0px;
+	flex-grow: 1;
+	background-color: #fff;
+	padding: 96px 0px 80px;
 	display: flex;
-	align-items: center;
-	padding: 2rem 0;
-	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(100vh - 170px);
 }
 
-.featureSvg {
-	height: 200px;
-	width: 200px;
+.featuresBox h1 {
+	font-size: 60px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.featuresBox p {
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.buttons {
+	margin: 0 auto;
+	max-width: 180px;
 }

@@ -12,7 +12,7 @@ const config = {
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/favicon.ico',
+	favicon: 'img/logo.png',
 	organizationName: 'poly-state', // Usually your GitHub org/user name.
 	projectName: 'poly-state', // Usually your repo name.
 
@@ -23,12 +23,10 @@ const config = {
 			({
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					// Please change this to your repo.
 					editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
 				},
 				blog: {
 					showReadingTime: true,
-					// Please change this to your repo.
 					editUrl:
 						'https://github.com/facebook/docusaurus/edit/main/website/blog/',
 				},
@@ -45,17 +43,16 @@ const config = {
 			navbar: {
 				title: 'Poly state',
 				logo: {
-					alt: 'My Site Logo',
-					src: 'img/logo.svg',
+					alt: 'Poly state',
+					src: 'img/logo.png',
 				},
 				items: [
 					{
 						type: 'doc',
-						docId: 'intro',
+						docId: 'installation',
 						position: 'left',
-						label: 'Tutorial',
+						label: 'Documention',
 					},
-					{ to: '/blog', label: 'Blog', position: 'left' },
 					{
 						href: 'https://github.com/poly-state/poly-state',
 						label: 'GitHub',
@@ -65,48 +62,8 @@ const config = {
 			},
 			footer: {
 				style: 'dark',
-				links: [
-					{
-						title: 'Docs',
-						items: [
-							{
-								label: 'Tutorial',
-								to: '/docs/intro',
-							},
-						],
-					},
-					{
-						title: 'Community',
-						items: [
-							{
-								label: 'Stack Overflow',
-								href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-							},
-							{
-								label: 'Discord',
-								href: 'https://discordapp.com/invite/docusaurus',
-							},
-							{
-								label: 'Twitter',
-								href: 'https://twitter.com/docusaurus',
-							},
-						],
-					},
-					{
-						title: 'More',
-						items: [
-							{
-								label: 'Blog',
-								to: '/blog',
-							},
-							{
-								label: 'GitHub',
-								href: 'https://github.com/facebook/docusaurus',
-							},
-						],
-					},
-				],
-				copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+				copyright:
+					'Made with ❤️ and built using Typescript and hosted on Netlify',
 			},
 			prism: {
 				theme: lightCodeTheme,
