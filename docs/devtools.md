@@ -12,7 +12,7 @@ Install [**redux-devtools**](https://github.com/reduxjs/redux-devtools/tree/main
 
 ```jsx
 import { createStore } from '@poly-state/poly-state';
-import { createHooks } from '@poly-state/react';
+import { useStore } from '@poly-state/react';
 
 const counterStore = createStore(
 	{ count: 0 },
@@ -21,6 +21,5 @@ const counterStore = createStore(
 		storeIdentifier: 'counterStore',
 	}
 );
-
-const [useCounterStore, useCounterStoreSelector] = createHooks(counterStore);
+const useCounterStore = () => useStore(counterStore);
 ```

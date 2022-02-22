@@ -14,33 +14,25 @@ yarn add @poly-state/poly-state @poly-state/react
 
 ```jsx
 import { createStore } from '@poly-state/poly-state';
-import { createHooks } from '@poly-state/react';
+import { useStore } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-
-const [useCounterStore, useCounterStoreSelector] = createHooks(counterStore);
+const useCounterStore = () => useStore(counterStore);
 ```
 
-### Use store on your components
+### Use store on your component
 
 ```jsx
 export const MyCounter = () => {
-	const count = useCounterStoreSelector('count');
-	// or const { count } = useCounterStore();
+	const { count } = useCounterStore();
 
 	const handleIncrement = useCallback(() => {
 		counterStore.setCount((prevCount) => prevCount + 1);
-		// or counterStore.setCount(count + 1);
-		// or counterStore.setState({ count: count + 1 });
-		// or counterStore.setState((state) => {
-		//	return {...state, count: state.count + 1};
-		//}));
-	}, [counterStore]);
+	}, []);
 
-	const handleDecrement = useCallback(
-		() => counterStore.setCount((prevCount) => prevCount - 1),
-		[counterStore]
-	);
+	const handleDecrement = useCallback(() => {
+		counterStore.setCount((prevCount) => prevCount - 1);
+	}, []);
 
 	return (
 		<div>

@@ -1,6 +1,3 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -13,23 +10,14 @@ const config = {
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/logo.png',
-	organizationName: 'poly-state', // Usually your GitHub org/user name.
-	projectName: 'poly-state', // Usually your repo name.
+	organizationName: 'poly-state',
+	projectName: 'poly-state',
 
 	presets: [
 		[
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
-				docs: {
-					sidebarPath: require.resolve('./sidebars.js'),
-					editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
-				},
-				blog: {
-					showReadingTime: true,
-					editUrl:
-						'https://github.com/facebook/docusaurus/edit/main/website/blog/',
-				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
 				},
@@ -63,7 +51,7 @@ const config = {
 			footer: {
 				style: 'dark',
 				copyright:
-					'Made with ❤️ and built using Typescript and hosted on Netlify',
+					'Made with ❤️ in Dhaka. Built using TypeScript and hosted on Netlify',
 			},
 			prism: {
 				theme: lightCodeTheme,
