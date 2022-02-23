@@ -1,5 +1,8 @@
 ---
-sidebar_position: 2
+id: core-features
+title: Core Features
+slug: /core-features
+sidebar_label: Core Features
 ---
 
 # Core Features

@@ -1,5 +1,8 @@
 ---
-sidebar_position: 3
+id: react-quick-start
+title: Quick Start
+slug: /react-quick-start
+sidebar_label: Quick Start
 ---
 
 # ReactJS Quick Start
@@ -20,7 +23,7 @@ const counterStore = createStore({ count: 0 });
 const useCounterStore = () => useStore(counterStore);
 ```
 
-### Use store on your component
+### Use store
 
 ```jsx
 export const MyCounter = () => {

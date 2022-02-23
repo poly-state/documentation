@@ -1,8 +1,21 @@
 ---
-sidebar_position: 6
+id: typeScript-support
+title: TypeScript Support
+slug: /typeScript-support
+sidebar_label: TypeScript Support
 ---
 
 # TypeScript Support
+
+:::important Prerequisites
+
+- Understanding of [TypeScript syntax and terms](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- Familiarity with TypeScript concepts like [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) and [utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+- Knowledge of [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+
+:::
+
+## Overview
 
 TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. `poly-state` is written in TypeScript and provides first-class TypeScript support.
 

@@ -1,5 +1,8 @@
 ---
-sidebar_position: 8
+id: supported-platforms
+title: Supported Platforms
+slug: /supported-platforms
+sidebar_label: Supported Platforms
 ---
 
 # Supported Platforms

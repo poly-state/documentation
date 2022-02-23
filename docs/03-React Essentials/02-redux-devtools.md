@@ -1,5 +1,8 @@
 ---
-sidebar_position: 4
+id: redux-devtools
+title: Redux DevTools
+slug: /redux-devtools
+sidebar_label: Redux DevTools
 ---
 
 # Redux DevTools

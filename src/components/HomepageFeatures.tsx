@@ -1,11 +1,8 @@
 import { Link } from '@docusaurus/router';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 import styles from './HomepageFeatures.module.css';
 
 export default function HomepageFeatures(): JSX.Element {
-	const { siteConfig } = useDocusaurusContext();
-
 	return (
 		<section>
 			<div className='container'>
