@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
 	title: 'Poly state',
 	tagline: 'A boilerplate free state management library',
-	url: 'https://your-docusaurus-test-site.com',
+	url: 'https://poly-state.github.io/',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
