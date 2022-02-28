@@ -13,16 +13,28 @@ Install [**redux-devtools**](https://github.com/reduxjs/redux-devtools/tree/main
 
 ## Enable DevTools
 
-```jsx
-import { createStore } from '@poly-state/poly-state';
+We have a middleware to enable Redux DevTools on your store. Your store should be wrapped with `withDevTools`, otherwise the it will not work as expected. Here `Counter Store` is a store identifier for the Redux DevTools.
+
+```jsx {5}
+import { createStore, withDevTools } from '@poly-state/poly-state';
 import { useStore } from '@poly-state/react';
 
-const counterStore = createStore(
-	{ count: 0 },
-	{
-		enableDevTools: true,
-		storeIdentifier: 'counterStore',
-	}
-);
+const counterStore = createStore({ count: 0 });
+withDevTools(counterStore, 'Counter Store');
+
+const useCounterStore = () => useStore(counterStore);
+```
+
+## Conditionally enable
+
+```jsx {5-7}
+import { createStore, withDevTools } from '@poly-state/poly-state';
+import { useStore } from '@poly-state/react';
+
+const counterStore = createStore({ count: 0 });
+if (process.env.NODE_ENV === 'development') {
+	withDevTools(counterStore, 'Counter Store');
+}
+
 const useCounterStore = () => useStore(counterStore);
 ```

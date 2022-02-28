@@ -23,25 +23,28 @@ const counterStore = createStore({ count: 0 });
 const useCounterStore = () => useStore(counterStore);
 ```
 
-### Use store
+### Use store and update
 
 ```jsx
 export const MyCounter = () => {
 	const { count } = useCounterStore();
 
-	const handleIncrement = useCallback(() => {
-		counterStore.setCount((prevCount) => prevCount + 1);
-	}, []);
-
-	const handleDecrement = useCallback(() => {
-		counterStore.setCount((prevCount) => prevCount - 1);
-	}, []);
-
 	return (
 		<div>
 			<h1>{count}</h1>
-			<button onClick={handleIncrement}>Increment</button>
-			<button onClick={handleDecrement}>Decrement</button>
+			<button
+				onClick={() => {
+					counterStore.setCount((prev) => {
+						if (prev === 0) return prev;
+						return prev - 1;
+					});
+				}}
+			>
+				Decrement
+			</button>
+			<button onClick={() => counterStore.setCount((prev) => prev + 1)}>
+				Increment
+			</button>
 		</div>
 	);
 };
