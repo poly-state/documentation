@@ -5,13 +5,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
 	title: 'Poly state',
 	tagline: 'A boilerplate free state management library',
-	url: 'https://poly-state.github.io/',
+	url: 'https://poly-state.github.io',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/logo.png',
 	organizationName: 'poly-state',
-	projectName: 'poly-state',
+	deploymentBranch: 'gh-pages',
+	projectName: 'poly-state.github.io',
+	trailingSlash: false,
 
 	presets: [
 		[
