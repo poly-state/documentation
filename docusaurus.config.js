@@ -53,7 +53,7 @@ const config = {
 			footer: {
 				style: 'dark',
 				copyright:
-					'Made with ❤️ in Dhaka. Built using TypeScript and hosted on Netlify',
+					'Made with ❤️ in Dhaka. Built using TypeScript and hosted on GitHub Pages',
 			},
 			prism: {
 				theme: lightCodeTheme,
