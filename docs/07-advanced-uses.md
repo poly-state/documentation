@@ -9,6 +9,15 @@ sidebar_label: Advanced Uses
 
 Here is an example store of todo items and it is written in OOP style. We strongly recommend to use TypeScript to write the code.
 
+:::info Things to know
+
+In the following example, we create a variable `initialState` and assign it to an instance of the `TodoStore` class. At the time of creating TodoStore class we also extends the `Store` class. The Store class come with a few methods which we can use to interact with the store. Please check [**API reference**](/docs/api-reference) for more details. Following methods are available in the Store class:
+
+:::
+
+- `setCount(count)`: This method is used to set the count of the todo items.
+- `setTodos(todos)`: This method is used to set the todo items.
+
 ### Example
 
 ```tsx
@@ -84,7 +93,7 @@ class TodoStore extends getStoreClass<TodoStoreState>() {
 		});
 		const todo = (await response.json()) as Todo;
 
-		if (response.status === 200) {
+		if (response.ok) {
 			this.setState((state) => ({
 				...state,
 				todos: [...state.todos, todo],
@@ -101,7 +110,7 @@ class TodoStore extends getStoreClass<TodoStoreState>() {
 
 ```tsx
 import { FC, ChangeEvent, KeyboardEvent, useState } from 'react';
-import { todoStore } from './todo-store';
+import { todoStore } from './todo.store';
 
 export const AddTodo: FC = () => {
 	const [text, setText] = useState<string>('');
@@ -132,3 +141,29 @@ export const AddTodo: FC = () => {
 	);
 };
 ```
+
+## Custom Equality Checks
+
+```ts
+const store = createStore(
+	{
+		count: 0,
+		todos: [],
+	},
+	{
+		equalityComparator: (prev, next) => {
+			/**
+			 * This is a custom equality check ->
+			 * If true is returned, all components using this store will re render
+			 * if false is returned, no components will re render
+			 */
+		},
+	}
+);
+```
+
+:::info
+
+If no funcations are provided to the `equalityComparator` option, the default equality check will be used. Which performs a deep equality check.
+
+:::

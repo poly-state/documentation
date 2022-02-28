@@ -9,6 +9,7 @@ export default function HomepageFeatures(): JSX.Element {
 				<div className='row'>
 					<div className='col'>
 						<div className={styles.featuresBox}>
+							<img src='img/logo.jpeg' alt='poly-state' />
 							<h1>poly-state</h1>
 							<p>
 								A boilerplate free state management library for your React,

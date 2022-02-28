@@ -3,7 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'Poly state',
+	title: 'Poly State',
 	tagline: 'A boilerplate free state management library',
 	url: 'https://poly-state.github.io',
 	baseUrl: '/',
@@ -31,10 +31,10 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'Poly state',
+				title: 'Poly State',
 				logo: {
-					alt: 'Poly state',
-					src: 'img/logo.png',
+					alt: 'poly-state',
+					src: 'img/logo.jpeg',
 				},
 				items: [
 					{
@@ -44,7 +44,25 @@ const config = {
 						label: 'Documention',
 					},
 					{
-						href: 'https://github.com/poly-state/poly-state',
+						type: 'doc',
+						docId: 'React Essentials/react-quick-start',
+						position: 'left',
+						label: 'React',
+					},
+					{
+						type: 'doc',
+						docId: 'nextjs-ssr',
+						position: 'left',
+						label: 'Next.js',
+					},
+					{
+						type: 'doc',
+						docId: 'preact',
+						position: 'left',
+						label: 'Preact',
+					},
+					{
+						href: 'https://github.com/poly-state',
 						label: 'GitHub',
 						position: 'right',
 					},
@@ -53,7 +71,7 @@ const config = {
 			footer: {
 				style: 'dark',
 				copyright:
-					'Made with ❤️ in Dhaka. Built using TypeScript and hosted on GitHub Pages',
+					'Made with ❤️ and built using TypeScript and hosted on GitHub Pages',
 			},
 			prism: {
 				theme: lightCodeTheme,

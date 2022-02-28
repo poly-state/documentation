@@ -5,8 +5,6 @@ slug: /supported-platforms
 sidebar_label: Supported Platforms
 ---
 
-# Supported Platforms
-
 - React/Next.js
   - npm: `npm install @poly-state/react`
   - yarn: `yarn add @poly-state/react`
