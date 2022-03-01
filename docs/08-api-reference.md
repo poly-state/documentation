@@ -17,4 +17,4 @@ sidebar_label: API Reference
 
 - `subscribeKey(key, listener): UnSubscribeFunction`: This method will subscribe to a specific key of the store and call the listener function when the state of that key is changed, and return an unsubscribe function once called will no longer call the listener function even if the store is changed.
 
-- `use(middleware)`: this is used to intercept state updates and potentially modify them before they are applied to the store. See middleware docs to learn more about them.
+- `use(middleware)`: this is used to intercept state updates and potentially modify them before they are applied to the store. See middleware docs to learn more about them. Check out the [**middleware**](/docs/advanced-uses#middleware) section for reference.

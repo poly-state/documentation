@@ -14,9 +14,8 @@ To get started, create an \_app.tsx file in your pages folder and add the follow
 
 ```tsx
 import App, { AppContext, AppProps } from 'next/app';
-import Head from 'next/head';
 import { parseCookies } from 'nookies';
-import { authStore, AuthStoreType, useAuthStore } from '../stores';
+import { authStore, AuthStoreType, useAuthStore } from '../auth.store';
 
 type ExtendedAppProps = AppProps & { authStore: AuthStoreType };
 
@@ -25,11 +24,17 @@ function CustomApp({
 	pageProps,
 	authStore: authStoreHydrateValue,
 }: ExtendedAppProps) {
-	authStore.hydrate(authStoreHydrateValue); // receive the serialized state from server side to client side, since it fires synchroneously all of your pages and apps will have the latest state
+	/**
+	 * receive the serialized state from server side to client side,
+	 * since it fires synchroneously all of your pages and apps will
+	 * have the latest state
+	 */
+	authStore.hydrate(authStoreHydrateValue);
 	const { isLoggedIn } = useAuthStore(); // true if the user is logged in
+
 	return (
 		<div className='app'>
-			{isLoggedIn && <Header />}
+			{isLoggedIn && <div>You are logged in</div>}
 			<Component {...pageProps} />
 		</div>
 	);
@@ -45,7 +50,6 @@ CustomApp.getInitialProps = async (appContext: AppContext) => {
 	}
 
 	const appProps = await App.getInitialProps(appContext);
-
 	return { ...appProps, authStore: authStore.getState() };
 };
 

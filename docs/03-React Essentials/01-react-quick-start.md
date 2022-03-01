@@ -13,22 +13,21 @@ Your can use this library on your ReactJS application. For binding state in your
 yarn add @poly-state/poly-state @poly-state/react
 ```
 
-### Create a store
+## Create a store
 
 ```jsx
 import { createStore } from '@poly-state/poly-state';
 import { createStoreHooks } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-export const [useCounterStore, useCounterSelector] =
-	createStoreHooks(counterStore);
+const [useCounterStore, useCounterSelector] = createStoreHooks(counterStore);
 ```
 
-### Use store and update
+## Use store and update
 
 ```jsx
 export const MyCounter = () => {
-	const count = useCounterSelector('count');
+	const { count } = useCounterStore();
 
 	return (
 		<div>

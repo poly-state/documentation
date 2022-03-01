@@ -21,8 +21,11 @@ Instead of using `useStore` and `useStoreSelector` hooks, you can use `createSto
 import { createStoreHooks } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-export const [useCounterStore, useCounterSelector] =
-	createStoreHooks(counterStore);
+const [useCounterStore, useCounterSelector] = createStoreHooks(counterStore);
+
+// way to use
+const { count } = useCounterStore();
+const count = useCounterSelector('count');
 ```
 
 ## useStore
@@ -33,7 +36,7 @@ export const [useCounterStore, useCounterSelector] =
 import { useSelector } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-export useCounterSelector = () => useSelector(counterStore);
+const useCounterSelector = () => useSelector(counterStore);
 ```
 
 ## useStoreSelector
@@ -44,5 +47,5 @@ export useCounterSelector = () => useSelector(counterStore);
 import { useStore } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-export useCounterStore = () => useStore(counterStore);
+const useCounterStore = () => useStore(counterStore);
 ```

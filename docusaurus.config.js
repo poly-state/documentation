@@ -71,7 +71,7 @@ const config = {
 			footer: {
 				style: 'dark',
 				copyright:
-					'Made with ❤️ and built using TypeScript and hosted on GitHub Pages',
+					'Made with ❤️ and built using TypeScript and hosted on GitHub',
 			},
 			prism: {
 				theme: lightCodeTheme,
