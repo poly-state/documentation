@@ -24,7 +24,7 @@ export default function HomepageFeatures(): JSX.Element {
 								</Link>
 								<a
 									className='button button--secondary button--lg'
-									href='https://codesandbox.io/s/angry-scott-6od6vo'
+									href='https://codesandbox.io/s/poly-state-example-6od6vo'
 									target='_blank'
 								>
 									Playground
