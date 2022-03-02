@@ -5,8 +5,6 @@ slug: /core-features
 sidebar_label: Core Features
 ---
 
-# Core Features
-
 - Boilerplate free API
 
 - No reducers and actions
@@ -22,3 +20,9 @@ sidebar_label: Core Features
 - Equality Checks to prevent unnecessary re-renders
 
 - SSR support
+
+## Preview
+
+<figure class="video-container">
+  <iframe src="/preview.mp4" frameborder="0" width="100%" />
+</figure>
