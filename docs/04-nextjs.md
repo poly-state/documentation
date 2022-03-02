@@ -44,7 +44,7 @@ CustomApp.getInitialProps = async (appContext: AppContext) => {
 	const cookies = parseCookies(appContext.ctx);
 
 	if (cookies?.token && cookies?.token !== '') {
-		authStore.setBatch((state) => {
+		authStore.setState((state) => {
 			return { ...state, isLoggedIn: true, token: cookies.token };
 		});
 	}
