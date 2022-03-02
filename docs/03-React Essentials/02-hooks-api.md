@@ -36,7 +36,7 @@ const count = useCounterSelector('count');
 import { useSelector } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-const useCounterSelector = () => useSelector(counterStore);
+const useCounterStore = () => useStore(counterStore);
 ```
 
 ## useStoreSelector
@@ -47,5 +47,5 @@ const useCounterSelector = () => useSelector(counterStore);
 import { useStore } from '@poly-state/react';
 
 const counterStore = createStore({ count: 0 });
-const useCounterStore = () => useStore(counterStore);
+const useCounterSelector = () => useSelector(counterStore);
 ```
