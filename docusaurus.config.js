@@ -30,6 +30,13 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			announcementBar: {
+				id: 'support_us',
+				content:
+					'Support Ukraine 🇺🇦 <a target="_blank" rel="noopener noreferrer" href="https://opensource.fb.com/support-ukraine">Help Provide Humanitarian Aid to Ukraine.</a>',
+				style: 'dark',
+				isCloseable: false,
+			},
 			navbar: {
 				title: 'Poly State',
 				logo: {

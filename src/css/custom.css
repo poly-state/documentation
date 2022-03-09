@@ -48,3 +48,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 	top: 0;
 	width: 100%;
 }
+
+.announcementBar_node_modules-\@docusaurus-theme-classic-lib-next-theme-AnnouncementBar-styles-module {
+	height: auto !important;
+	min-height: 50px;
+}
