@@ -34,7 +34,8 @@ const config = {
 				id: 'support_us',
 				content:
 					'Support Ukraine 🇺🇦 <a target="_blank" rel="noopener noreferrer" href="https://opensource.fb.com/support-ukraine">Help Provide Humanitarian Aid to Ukraine.</a>',
-				style: 'dark',
+				backgroundColor: '#2e2e2e',
+				textColor: '#ffffff',
 				isCloseable: false,
 			},
 			navbar: {
